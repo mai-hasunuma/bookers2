@@ -1,10 +1,15 @@
-<h1>Book detail</h1>
-<table>
-　<tbody>
-  <tr>
-    <td><%= @book.user.name %></td>
-    <td><%= @book.title %></td>
-    <td><%= @book.body %></td>
-    <td><%= link_to "edit", edit_book_path %></td>
-    <td><%= link_to "destroy", book_path(@book), method: :delete %></td>
-</tr>
+<div class="container">
+  <div class="row">
+  	<div class="col-lg-12">
+  	 <%= flash[:success] %>
+  </div>
+</div>
+  <div class="row">
+  	<div class="col-lg-3">
+      <%= render 'share/sidebar', {user: @book.user, book: @newbook} %>
+    </div>
+    <div class="col-lg-9">
+      <%= render 'share/detailbook', book: @book %>
+    </div>
+  </div>
+</div>

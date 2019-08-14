@@ -1,10 +1,23 @@
-<h1>welcome to Bookers !!</h1>
-
-<p>In Bookers,</br>
-
-you can share and exchange your opinions , inpressions , and emotions<br>
-
-about varioius books!</p>
-<%= link_to "Log in", user_session_path %>
-<%= link_to "Sign up", new_user_registration_path %>
-<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<div class="container">
+  <div class="row">
+  	<div class="col-lg-3">
+  	</div>
+    <div class="col-lg-6">
+      <h1>welcome to <span class="glyphicon glyphicon-book" aria-hidden="true"><strong>Bookers</strong>  !!</span></h1>
+      <p>In <span class="glyphicon glyphicon-book" aria-hidden="true"><strong>Bookers,</strong></span></br>
+         you can share and exchange your opinions , inpressions , and emotions<br>
+         about varioius books!
+      </p>
+      <div class="row">
+        <div class="col-lg-2">
+        </div>
+      	<div class="col-lg-10">
+          <%= link_to user_session_path do %>
+        <button class="btn btn-info  btn-block col-lg-10">Log in</button>
+          <% end %>
+          <%= link_to new_user_registration_path do %>
+        <button class="btn btn-success  btn-block col-lg-10">Sign in</button>
+          <% end %>
+        </div>
+  </div>
+</div>
