@@ -76,7 +76,7 @@
 
 
 <div class="container">
-<%= flash.each do |key, value| %>
+<% flash.each do |key, value| %>
 <%= content_tag(:div, value, class: "#{key}") %>
 <% end %>
 </div>
